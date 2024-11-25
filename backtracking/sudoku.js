@@ -16,7 +16,7 @@ The '.' character indicates empty cells.
 
 const n = 9;
 
-const board = [
+const sudokuBoard = [
 	["5", "3", ".", ".", "7", ".", ".", ".", "."],
 	["6", ".", ".", "1", "9", "5", ".", ".", "."],
 	[".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -28,34 +28,10 @@ const board = [
 	[".", ".", ".", ".", "8", ".", ".", "7", "9"],
 ];
 
-const array = [];
+//$ testing
 
-// Create the 2D array with empty arrays
-for (let i = 0; i < n; i++) {
-	array[i] = [];
-}
-
-// Fill the 2D array with Sets
-for (let i = 0; i < n; i++) {
-	for (let j = 0; j < n; j++) {
-		array[i][j] = new Set();
-	}
-}
-
-console.log(array);
-
-for (let i = 0; i < n; i++) {
-	for (let j = 0; j < n; j++) {
-		if (board[i][j] === ".") {
-			for (let r = 0; r < n; r++) {
-				if (board[r][j] != ".") array[i][j].add(board[r][j]);
-			}
-
-			for (let c = 0; c < n; c++) {
-				if (board[i][c] != ".") array[i][j].add(board[i][c]);
-			}
-		}
-	}
-}
-
-console.log(array);
+const board = [
+	["5", "3", "."],
+	["6", ".", "."],
+	[".", "9", "8"],
+];
