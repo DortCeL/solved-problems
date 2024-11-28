@@ -1,18 +1,12 @@
-class MinHeap:
-    def __init__(self):
-        self.heap = []
+# ord('a') => ordinal : gives the ASCII value
+# chr(ASCII_CODE) => gives the letter
 
-    def insert(self, value):
-        # insert at the end
-        self.heap.append(value)
-        # self._heapify()
+import math
 
-    # underscore indicates private method (by convention)
-    def _heapify(self, index):
-        parentIndex = (index - 1) // 2
+arr = [chr(i) for i in range(ord('A'), ord('A')+20)]
 
-        # while not at root & heap property is violated
-        if index > 0 and self.heal[index] < self.heap[parentIndex]:
-            # swap current node with its Index
-            self.heap[index], self.heap[parentIndex] = self.heap[parentIndex], self.heap[index]
-            self._heapify(parentIndex)  # recursively check parent
+# a function that prints an array in binary tree representation... array after array in levels, separated by comma if same level
+
+
+x = math.ceil(math.log2(8))
+print(x, ':', arr[x])
